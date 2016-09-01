@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+
+/**
+ * @author APCS2
+ *
+ */
+public class DoMath {
+
+	public static void main(String[] args) {
+		double num1 = 360.0;
+		System.out.println(Calculate.toRadians(num1));
+	}
+}

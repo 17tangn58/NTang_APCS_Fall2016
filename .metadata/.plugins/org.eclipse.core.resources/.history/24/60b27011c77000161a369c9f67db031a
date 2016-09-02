@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+
+/**
+ * @author APCS2
+ *
+ */
+public class DoMath {
+
+	public static void main(String[] args) {
+		int num1 = 3;
+		int num2 = 1;
+		int num3 = 2;
+		System.out.println(Calculate.isDivisibleBy(num1, num2));
+	}
+}

@@ -101,12 +101,28 @@ public class Calculate {
 		double answer;
 		if (100*num-b>=.5){
 			answer = num+1;
-			answer = (double)(answer*100);
+			return answer = (double) (answer*100);
 		}
 		else {
 			answer = num-1;
-			answer = (double)(answer*100);
+			return answer = (double) (answer*100);
 		}	
 	}
-	
+	public static double exponent(double num, int exp){
+		double temp = 1;
+		for(int i=1;i <= exp; i++){
+			num=(double) (temp)*num;
+			temp= (double) (num);
+		return num;			
+		}
+	}
+	public static int factorial(int num){
+		
+	}
+	public static boolean isPrime(int num){
+		for (int i = 2; i<=10000;i++){
+			if (num%i==0);
+				return 
+		}
+	}
 }

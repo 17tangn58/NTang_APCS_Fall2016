@@ -59,7 +59,7 @@ public class Calculate {
 		int a=num1*num3;
 		int b = num1*num4-num2*num3;
 		int c = num2*num4;
-		String x=;
+		String x = "String";
 		return(a + x+"2" + "+" + b+x +"+" + c);
 	}
 	
@@ -109,22 +109,20 @@ public class Calculate {
 		}	
 	}
 	public static double exponent(double num, int exp){
-		for(int i=1;i < exp; i++){
-			num= num*num;
-		return (double)(num);			
+		double temp = 1;
+		for(int i=1;i <= exp; i++){
+			num=(double) (temp)*num;
+			temp= (double) (num);
+		return num;			
 		}
 	}
 	public static int factorial(int num){
-		for(int i=1;i<=num; i++){
-			
-		}
+		
 	}
 	public static boolean isPrime(int num){
-		for (int i = 2; Calculate.isDivisibleBy(num, i);i++){
-			return false;
+		for (int i = 2; i<=10000;i++){
+			if (num%i==0);
+				return 
 		}
-	}
-	public static int gcf(int a, int b){
-		
 	}
 }

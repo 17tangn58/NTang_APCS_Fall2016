@@ -63,7 +63,6 @@ public class Calculate {
 	}
 	
 	public static boolean isDivisibleBy(int num1, int num2) {
-		if (num2=0) throw new
 		if (num1%num2==0)
 			return(true);
 		else;
@@ -118,7 +117,6 @@ public class Calculate {
 		}
 	}
 	public static int factorial(int num){
-		if (num<0) throw new IllegalArgumentException("This factorial method does not work with negatives");
 		int ans=1;
 		int product=1;
 		for(int i=1;i<=num; i++){
@@ -128,11 +126,11 @@ public class Calculate {
 		return ans;
 	}
 	public static boolean isPrime(int num){
-		for(int i=2;i<num;i++){
-			if(num%i==0)
-				return false;
+		
+		for (int i = 2; Calculate.isDivisibleBy(num, i);i++){
+			return false;
 		}
-		return true;
+		return Calculate.isDivisibleby;
 	}
 	public static int gcf(int a, int b){
 		

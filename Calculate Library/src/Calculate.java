@@ -57,13 +57,13 @@ public class Calculate {
 	
 	public static String foil(int num1, int num2, int num3, int num4, String s) {
 		int a=num1*num3;
-		int b = num1*num4-(num2*num3);
+		int b = num1*num4+(num2*num3);
 		int c = num2*num4;
 		return(a + s+"^2" + "+" + b+ s +"+" + c);
 	}
 	
 	public static boolean isDivisibleBy(int num1, int num2) {
-		if (num2=0) throw new IllegalArgumentException("Nothing is divisible by zero");
+		if (num2==0) throw new IllegalArgumentException("Nothing is divisible by zero");
 		if (num1%num2==0)
 			return(true);
 		else;
@@ -97,18 +97,18 @@ public class Calculate {
 			return(num2);
 	}
 	public static double round2(double num) {
-		int b = (int) (num*100);
-		double answer;
+		int b = (int)(num*100);
+		double answer=1;
 		if (100*num-b>=.5){
-			answer = num+1;
-			return answer = (double) (answer*100);
+			answer = (b+1);
 		}
 		else {
-			answer = num-1;
-			return answer = (double) (answer*100);
+			answer = (b-1);
 		}	
+		return answer/100;
 	}
 	public static double exponent(double num, int exp){
+		if (exp<0) throw new IllegalArgumentException("This method does not work with negative exponents");
 		double ans=1;
 		double num2=1.0;
 		for(int i=1;i <= exp; i++){
@@ -135,10 +135,29 @@ public class Calculate {
 		return true;
 	}
 	public static int gcf(int a, int b){
-		if() {
+		int ans= 1;
+		for(int i=1; i<=a || i<=b; i++){
+			if (Calculate.isDivisibleBy(a, i) || Calculate.isDivisibleBy(b, i)) {
+				ans= i;
+			}
+			else;
 		}
-		else
-			return 1;
+		return ans;
+	}
+	public static double sqrt(double a) {
+		if (a<0) throw new IllegalArgumentException("Negative square roots result in imaginary numbers");
+		double x=1.0;
+		double ans=a/2;
+		do{
+			x=ans;
+			ans=(x+(a/x))/2;
+		}
+		while((x-ans)!=0); 
+			return Calculate.round2(ans);
+	}
+	public static String quadForm(int a, int b, int c){
 		
+		return null;
 	}
 }
+

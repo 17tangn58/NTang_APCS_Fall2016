@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+
+/**
+ * @author APCS2
+ *
+ */
+public class DoMath {
+
+	public static void main(String[] args) {
+		System.out.println(Calculate.foil(3, 4, -4, 5, "x"));
+	}
+}

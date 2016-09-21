@@ -156,8 +156,15 @@ public class Calculate {
 			return Calculate.round2(ans);
 	}
 	public static String quadForm(int a, int b, int c){
-		
-		return null;
+		double discriminant = Calculate.discriminant((double)(a), (double)(b), (double)(c));
+		if (discriminant<0)
+			return ("no real roots");
+		double sqrt = Calculate.sqrt(discriminant);
+		double ans1=((-b+sqrt)/2/(a));
+		double ans2=((-b-sqrt)/2/(a));
+		ans1=Calculate.round2(ans1);
+		ans2=Calculate.round2(ans2);
+		return (ans2+" and "+ans1);
 	}
 }
 

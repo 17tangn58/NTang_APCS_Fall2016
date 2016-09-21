@@ -9,6 +9,6 @@
 public class DoMath {
 
 	public static void main(String[] args) {
-		System.out.println(Calculate.sqrt(72.0));
+		System.out.println(Calculate.quadForm(6, 12, 4));
 	}
 }

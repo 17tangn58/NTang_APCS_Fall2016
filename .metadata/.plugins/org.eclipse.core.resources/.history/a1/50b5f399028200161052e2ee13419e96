@@ -103,7 +103,7 @@ public class Calculate {
 			answer = (b+1);
 		}
 		else {
-			answer = (b);
+			answer = (b-1);
 		}	
 		return answer/100;
 	}
@@ -141,7 +141,6 @@ public class Calculate {
 				ans= i;
 			}
 			else;
-				return 1;
 		}
 		return ans;
 	}

@@ -100,11 +100,7 @@ public class Calculate {
 		int b = (int)(num*100);
 		double answer=1;
 		if (100*num-b>=.5){
-			if(num<0){
-				answer=b-1;
-			}
-			else
-				answer = (b+1);
+			answer = (b+1);
 		}
 		else {
 			answer = (b);
@@ -175,10 +171,10 @@ public class Calculate {
 		ans1=Calculate.round2(ans1);
 		ans2=Calculate.round2(ans2);
 		if (ans1>ans2){
-			return (ans2+" and "+ans1);
+			return (ans1+" "+ans2);
 		}
 		else
-			return (ans1+" and "+ans2);
+			return (ans2+" and "+ans1);
 	}
 }
 

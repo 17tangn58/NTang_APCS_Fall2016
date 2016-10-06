@@ -1,0 +1,39 @@
+// Nathan Tang 2nd period 9/30/16
+import java.util.*;
+public class ProcessingNumbers {
+	public static void main(String[] args) {
+		Scanner userInput=new Scanner(System.in);
+		System.out.println("How many numbers would you like to use?");
+		int numberCount=userInput.nextInt();
+		System.out.println("Enter "+numberCount+" integers.");
+		int max=userInput.nextInt();
+		int min=max;
+		int EvenSum=0;
+		int evenMax=0;
+		int nextnum=max;
+		if(max%2==0){
+			EvenSum=max;
+			evenMax=max;
+		}
+		for(int i=0;i<numberCount;i++){
+			if(nextnum>max){
+				max=nextnum;
+			}
+			if(nextnum<min){
+				min=nextnum;
+			}
+			if(nextnum%2==0){
+				EvenSum+=nextnum;
+				if(nextnum>evenMax){
+					evenMax=nextnum;
+				}
+			}
+			nextnum=userInput.nextInt();
+		}
+		System.out.println("min: "+min);
+		System.out.println("max: "+max);
+		System.out.println("Sum of all even numbers: "+EvenSum);
+		System.out.println("Greatest even input: "+evenMax);
+	}
+
+}

@@ -25,25 +25,23 @@ public class Magpie3 {
 	
 	public String getResponse(String statement) {
 		String response = "";
-		if (findKeyword(statement, "no", 0) >= 0) {
+		if (statement.findkeyword(statement, "no") >= 0) {
 			response = "Why so negative?";
-		} else if (findKeyword(statement, "mother", 0) >= 0
-				|| findKeyword(statement, "father", 0) >= 0
-				|| findKeyword(statement, "sister") >= 0
-				|| findKeyword(statement, "brother") >= 0) {
+		} else if (statement.findKeyword(statement, "mother", 0) >= 0
+				|| statement.indexOf("father") >= 0
+				|| statement.indexOf("sister") >= 0
+				|| statement.indexOf("brother") >= 0) {
 			response = "Tell me more about your family.";
-		}else if (findKeyword(statement, "Latham")>=0
-				||findKeyword(statement, "Dreyer")>=0
-				||findKeyword(statement, "Paul")>=0
-				||findKeyword(statement, "Dwyer")>=0
-				||findKeyword(statement, "Louie")>=0
-				||findKeyword(statement, "Headley")>=0){
+		}else if (statement.indexOf("Latham")>=0
+				||statement.indexOf("Dreyer")>=0
+				||statement.indexOf("Paul")>=0
+				||statement.indexOf("Dwyer")>=0
+				||statement.indexOf("Louie")>=0
+				||statement.indexOf("Headley")>=0){
 			response = "He or she sounds like a good teacher.";
-		}else if (findKeyword(statement, "hi")>=0||findKeyword(statement, "hello")>=0){
+		}else if (statement.indexOf("hi")>=0||statement.indexOf("hello")>=0){
 			response = "How are you?";
-		}else if(findKeyword(statement, "election")>=0
-				||findKeyword(statement, "Hillary")>=0
-				||findKeyword(statement, "Trump")>=0){
+		}else if(statement.indexOf("election")>=0||statement.indexOf("Hillary")>=0||statement.indexOf("Trump")>=0){
 			response = "I don't really follow politics.";
 		
 		}else {
